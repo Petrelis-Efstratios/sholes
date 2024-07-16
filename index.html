@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Math">
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            font-family: "Noto Sans Math", Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 3vh;
+        }
+        table {
+            position: absolute;
+            top: 10px;
+            left: 10px;            
+        }
+        th {
+            border: 2px solid black;
+            width: 60vh;
+            height: 8vh;
+            text-align: center;
+        }
+        thead > tr > th {
+            background-color: #afafaf;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ΣΧΟΛΗ</th>
+                <th>ΚΩΔΙΚΩΣ</th>
+                <th>ΒΑΘΜΟΛΟΓΙΑ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        let x = "ΕΚΠΑ 0330 8.15 ΑΠΘ 0338 8.2 ΟΠΑ 0333 8.2 ΠΑΝΕΠΙΣΤΗΜΙΟ-ΠΕΙΡΑΙΑ 0339 8.1 ΠΑΜΑΚ 1211 7.8 ΠΑΜΑΚ 1212 7.7 ΧΑΡΟΚΟΠΕΙΟ-ΠΑΝΕΠΙΣΤΗΜΙΟ 0412 8.1 ΠΑΝΕΠΙΣΤΗΜΙΟ-ΠΕΙΡΑΙΑ 0262 8 ΠΑΝΕΠΙΣΤΗΜΙΟ-ΚΡΗΤΗΣ 0216 -∞ ΠΑΝΕΠΙΣΤΗΜΙΟ-ΔΥΤΙΚΗΣ-ΑΤΤΙΚΗΣ 0390 7.6 ΔΙΠΑΕ-(ΘΕΣΣΑΛΟΝΙΚΗ) 1625 5 ΠΑΝΕΠΗΣΤΙΜΙΟ-ΘΕΣΣΑΛΙΑΣ-(ΛΑΜΙΑ) 0099 5 ΠΑΝΕΠΗΣΤΙΜΙΟ-ΘΕΣΣΑΛΙΑΣ-(ΛΑΜΙΑ) 0369 -∞ ΔΙΠΑΕ-(ΣΕΡΡΕΣ) 1622 8 ΠΑΝΕΠΗΣΤΙΜΙΟ-ΠΕΛΟΠΟΝΝΗΣΟΥ-(ΤΡΙΠΟΛΗ) 0098 7 ΔΙΠΑΕ-(ΚΑΒΑΛΑ) 1630 8 ΟΝΙΟ-ΠΑΝΕΠΗΣΤΙΜΙΟ-(ΚΕΡΚΥΡΑ) 0366 6 ΠΑΝΕΠΗΣΤΙΜΙΟ-ΘΕΣΣΑΛΙΑΣ-(ΛΑΡΙΣΑ) 1439 6.5 ΠΑΝΕΠΗΣΤΙΜΙΟ-ΔΥΤΙΚΗΣ-ΜΑΚΕΔΟΝΙΑΣ-(ΚΑΣΤΟΡΙΑ) 1554 8 ΠΑΝΕΠΗΣΤΙΜΙΟ-ΙΩΑΝΝΙΝΩΝ-(ΑΡΤΑ) 1250 5.5 ΠΑΝΕΠΗΣΤΙΜΙΟ-ΠΕΛΟΠΟΝΝΗΣΟΥ-(ΣΠΑΡΤΗ) 1519 6 ΙΟΝΙΟ-ΠΑΝΕΠΗΣΤΙΜΙΟ-(ΑΡΓΟΣΤΟΛΙ) 1456 -∞";
+        let table = document.querySelector("tbody");
+        for(let i = 1; i <= 22; i++) {
+            for(let j = 1; j <= 3; j++) {
+                document.querySelector(`tbody > tr:nth-child(${i}) > th:nth-child(${j})`).textContent = x.split(" ")[((i - 1) * 3) + j - 1]
+            }
+        }
+       //for(let i = 1; i < 66; i++) {
+        //document.querySelector(`tr:nth-child(${Math.floor((i - 1)  / 3) + 1}) > th:nth-child(${(i + 2) % 4 -1})`).textContent = x.split(" ")[i - 1];
+       //}
+    </script>
+</body>
+</html>
